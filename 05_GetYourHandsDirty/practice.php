@@ -1,24 +1,25 @@
 <?php
 	
 	// Define a Constant
-	
+	define("TITLE", "Variables and Constans");
 	
 	// Your Variables
-	
-	
-	/*
-	Use PHP to calculate the difference
-	between your birth year and this year
-	to show your age dynamically
-	*/
+	$my_name    = "Julian";
+	$fav_colour	= "Black";
+	$birth_year	= 1984;
 
+	date_default_timezone_set('Europe/Lisbon');
 	
+	$today		= date('F j, Y');
+	$this_year	= date('Y');
+
+	$my_age		= ($this_year - $birth_year);
 ?>
 
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Get Your Hands Dirty: <!-- PAGE TITLE --></title>
+		<title>Get Your Hands Dirty: <?php echo $TITLE; ?></title>
 		<link href="../assets/styles.css" rel="stylesheet">
 	</head>
 	<body>
@@ -34,23 +35,24 @@
 			
 			<div class="sandbox">
 				<h3>Today's Date:</h3>
-				<p><!-- DATE --></p>
+				<p><?php echo $today;?></p>
 				
 				<h3>My Name:</h3>
-				<p><!-- YOUR NAME --></p>
+				<p><?php echo $my_name;?></p>
 				
 				<h3>My Favourite Colour:</h3>
-				<p><!-- FAVOURITE COLOUR --></p>
+				<p><?php echo $fav_colour;?></p>
 				
 				<h3>My Age:</h3>
-				<p><!-- YOUR AGE --></p>
+				<p><?php echo $my_age;?></p>
+			
 			</div><!-- end sandbox -->
 			
 			<a href="index.php" class="button">Back to the final example</a>
 			
 			<hr>
 			
-			<small>&copy;<!-- THIS YEAR --> - <!-- YOUR NAME --></small>
+			<small>&copy;<?php echo $this_year;?>- <?php echo $my_name;?></small>
 		</div><!-- end wrapper -->
 		
 		<div class="copyright-info">

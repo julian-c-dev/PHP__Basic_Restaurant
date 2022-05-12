@@ -15,9 +15,10 @@
         4:00pm - 11:00pm<br /><br />
         <em>Sunday - Monday</em><br />
         Closed<br /><br />
+
     </div>
 </div>
-<small>&copy;2022 Julian Cantera</small>
+<small>&copy;<?php echo date('Y');?> &nbsp; <?php echo $companyName;?> </small>
 </div>
 </div>
 <div class="copyright-info">
